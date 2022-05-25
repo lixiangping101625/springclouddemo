@@ -23,7 +23,9 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2021.0.2</version>
+                <!--注意：spring cloud从2020.0版本开始对netflix oss的支持只保留了eureka-->
+<!--                <version>2021.0.2</version>-->
+                <version>Finchley.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
