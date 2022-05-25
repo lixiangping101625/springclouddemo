@@ -24,4 +24,4 @@ public String sayHi(){
 
 测试注意事项：启动注册中心》启动两个eureka-client》启动ribbon-consumer
 
-效果：每次访问返回的端口号是eureka-client运行的端口号
+效果：每次访问返回的端口号是eureka-client运行的端口号(默认负载均衡策略)
