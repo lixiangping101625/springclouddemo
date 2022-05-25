@@ -2,6 +2,7 @@ package com.hlkj.springcloud;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RoundRobinRule;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,11 +12,17 @@ import org.springframework.context.annotation.Configuration;
  * @decription: Ribbon负载均衡策略配置
  */
 @Configuration
+//服务级别负载均衡（优先级高于配置文件）
+@RibbonClient(name = "eureka-client", configuration = com.netflix.loadbalancer.RoundRobinRule.class)
 public class RibbonConfiguration {
 
-    @Bean
-    public IRule ribbonRule(){
-        return new RoundRobinRule();
-    }
+    /**
+     * 全局负载均衡
+     * @return
+     */
+//    @Bean
+//    public IRule ribbonRule(){
+//        return new RoundRobinRule();
+//    }
 
 }
