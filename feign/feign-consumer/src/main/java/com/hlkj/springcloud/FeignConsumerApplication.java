@@ -14,7 +14,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient // 表示到注册中心拉去服务注册列表
-@EnableFeignClients
+@EnableFeignClients // Feign关键注解
 public class FeignConsumerApplication {
 
     public static void main(String[] args) {

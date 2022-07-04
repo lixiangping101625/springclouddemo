@@ -19,6 +19,7 @@ public class Controller {
 
     @GetMapping("/hello")
     public String hello(){
+        // 服务通过调用代理接口的方式调用远程方法
         return service.helloWorld();
     }
 
