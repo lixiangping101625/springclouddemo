@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 public class RibbonConsumerApplication {
 
     @Bean
-    @LoadBalanced//负载均衡
+    @LoadBalanced//负载均衡.不用在代码中再传入ip、port具体的服务器地址。由ribbon自己选择具体的服务
     public RestTemplate template(){
         return new RestTemplate();
     }

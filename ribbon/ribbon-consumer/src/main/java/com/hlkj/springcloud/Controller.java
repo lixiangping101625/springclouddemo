@@ -19,8 +19,10 @@ public class Controller {
 
     @GetMapping("/hello")
     public String sayHi(){
-        //不再需要指定host和port
-        return restTemplate.getForObject("http://eureka-client/hello", String.class);
+        // 不再需要指定host和port
+        return restTemplate.getForObject(
+                "http://eureka-client/hello",
+                String.class);
     }
 
 }
