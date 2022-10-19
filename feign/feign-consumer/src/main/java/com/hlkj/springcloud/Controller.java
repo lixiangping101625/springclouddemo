@@ -23,4 +23,8 @@ public class Controller {
         return service.helloWorld();
     }
 
+    @GetMapping("/friend")
+    public Friend friend(){
+        return service.getFriend(new Friend());
+    }
 }
