@@ -25,6 +25,9 @@ public class Controller {
 
     @GetMapping("/friend")
     public Friend friend(){
-        return service.getFriend(new Friend());
+        Friend friend = new Friend();
+        friend.setName("小李");
+        friend.setPort("40001");
+        return service.getFriend(friend);
     }
 }
